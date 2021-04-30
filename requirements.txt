@@ -6,8 +6,7 @@ setuptools==40.8.0
 six==1.13.0    
 soupsieve==1.9.5     
 telebot == 0.0.3     
-telegram==0.0.1     
-updater==0.1.24    
+telegram==0.0.1      
 urllib3==1.25.7    
  
   
