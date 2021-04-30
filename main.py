@@ -292,11 +292,14 @@ def state_for_teacher1(message):
             bot.send_message(message.chat.id, 'Вы преподаватель в группе SQl', reply_markup=teachers_keyb())
             bot.send_message(message.chat.id, 'Выберите действие: ')
             bot.register_next_step_handler(message, state_for_sql_teacher)
+        if login == 'выйти' or password == 'выйти':
+            bot.send_message(message.chat.id, 'вы вышли')
     else:
         bot.send_message(message.chat.id, 'Вы ввели неправильно логин или пароль\n'
                                           'Попробуйте снова')
         bot.send_message(message.chat.id, 'Введите логин')
         bot.register_next_step_handler(message, state_for_teacher)
+      
 
 def state_for_java_teacher(message):
     students_chat_ids = ids_java()
