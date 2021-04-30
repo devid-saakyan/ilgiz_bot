@@ -151,5 +151,3 @@ def get_name(id):
     cursor = db.cursor()
     a = cursor.execute('select "second_name", "name", "surname" from students_table ').fetchall()
     return a
-
-print(get_name(719274325)[0][1])
