@@ -1,11 +1,10 @@
-from bot import config
+import config
 import telebot
-from db import db
 from telebot import types
 import sqlite3
 from time import sleep
-from db.database import *
-from bot.keyboards import courses_name, teachers_keyb, scores_keyb, yes_no
+from database import *
+from keyboards import courses_name, teachers_keyb, scores_keyb, yes_no
 import datetime
 
 joincourse = False
