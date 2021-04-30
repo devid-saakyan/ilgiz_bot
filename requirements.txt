@@ -1,4 +1,4 @@
-pyTelegramBotAPI==3.6.6     
+PyTelegramBotAPI==2.2.3   
 python-rex==0.4       
 PyYAML==5.2       
 requests==2.7.0  
