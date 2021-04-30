@@ -45,14 +45,20 @@ def handle_command(message):
 
 @bot.message_handler(commands=['mycourses'])
 def handle_command(message):
-    mycourses = db.select_mycourses(message.chat.id)
-    if mycourses:
-        message_text = ""
-        for course in mycourses:
-            message_text = course+"\n"
-        bot.send_message(message.chat.id, message_text)
+    chat_id = message.chat.id
+    spisok = []
+    if (chat_id,) in ids_java():
+        spisok.append('Java')
+    if (chat_id,) in ids_cpp():
+        spisok.append('C++')
+    if (chat_id,) in ids_python():
+        spisok.append('Python')
+    if (chat_id,) in ids_sql():
+        spisok.append('SQL')
+    if len(spisok) == 0:
+        bot.send_message(chat_id, 'Вы не записаны ни на один курс')
     else:
-        bot.send_message(message.chat.id, "Вы не записаны ни на один курс")
+        bot.send_message(chat_id, 'Вы записаны на {}'.format(*spisok))
 
 
 
