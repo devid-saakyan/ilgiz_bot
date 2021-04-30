@@ -170,7 +170,6 @@ def state_for_course_name(message):   ## состояние для ввода к
 def state_for_name(message): ## состояние для ввода имени
     name = str(message.text).split(' ')
     chat_id = message.chat.id
-    print(name)
     a = find_in_cpp(int(message.chat.id))
     b = find_in_java(int(message.chat.id))
     c = find_in_python(int(message.chat.id))
